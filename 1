@@ -1,0 +1,26 @@
+import streamlit as st
+
+st.title("Kalkulator Pembagian Warisan")
+
+# Input data ahli waris
+nama_ahli_waris = st.text_input("Nama Ahli Waris")
+hubungan = st.selectbox("Hubungan dengan Pewaris", ["Anak Laki-laki", "Anak Perempuan", ...])
+# Tambahkan input untuk ahli waris lainnya
+
+# Input jumlah harta
+jumlah_harta = st.number_input("Total Harta", min_value=0.0)
+
+# Input wasiat (jika ada)
+wasiat = st.number_input("Jumlah Wasiat", min_value=0.0)
+
+# Contoh perhitungan sederhana (ganti dengan perhitungan yang lebih akurat)
+if st.button("Hitung"):
+    # Simulasikan perhitungan
+    hasil_perhitungan = {
+        "Anak Pertama": jumlah_harta * 0.25,
+        "Anak Kedua": jumlah_harta * 0.25,
+        # ...
+    }
+    st.write("Hasil Pembagian Warisan")
+    for ahli_waris, bagian in hasil_perhitungan.items():
+        st.write(f"{ahli_waris}: {bagian}")
